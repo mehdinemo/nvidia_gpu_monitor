@@ -5,8 +5,13 @@ import schedule
 import re
 import os
 
+# Number of readings to store
 n = 60
+
+# Height of ASCII charts
 height = 2
+
+# Interval between readings (in seconds)
 sec = 1
 
 # Initialize lists to store values
@@ -31,6 +36,7 @@ def parse_output(output):
     else:
         print("Failed to parse nvidia-smi output.")
 
+    # If the length of any list exceeds n, remove the oldest values
     while len(temp) > n:
         temp.pop(0)
     while len(memory) > n:
@@ -41,7 +47,7 @@ def parse_output(output):
         usage.pop(0)
 
 
-# Function to plot graphs
+# Function to plot graphs in Matplotlib (not used in current version)
 def plot_graphs_mat():
     plt.figure(figsize=(15, 10))
 
@@ -67,7 +73,7 @@ def plot_graphs_mat():
     plt.clf()
 
 
-# Function to plot graphs
+# Function to plot graphs in the terminal using ASCII characters
 def plot_graphs_ascii():
     # Clear terminal
     os.system('cls' if os.name == 'nt' else 'clear')
