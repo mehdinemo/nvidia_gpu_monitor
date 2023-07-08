@@ -32,10 +32,10 @@ The script will start displaying ASCII line charts of the GPU parameters and wil
 
 You can modify the following variables in the script to change its behavior:
 
-- n: the number of most recent readings to display (default: 60)
-- height: the height of the ASCII charts (default: 2)
-- sec: the interval between updates, in seconds (default: 1)
+- `n`: the number of most recent readings to display (default: 60)
+- `height`: the height of the ASCII charts (default: 2)
+- `sec`: the interval between updates, in seconds (default: 1)
 
-## License
+[//]: # (## License)
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+[//]: # (This project is licensed under the MIT License. See the LICENSE file for details.)
